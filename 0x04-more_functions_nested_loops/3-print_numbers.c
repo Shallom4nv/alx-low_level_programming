@@ -2,16 +2,16 @@
 
 /**
  * print_numbers - prints numbers between 0 to 9.
- * Return: no return.
+ * Return: void.
  */
 
 void print_numbers(void)
 {
-	int h;
+	char c;
 
-	for (h = 48; h < 58; h++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		_putchar(h);
+		_putchar(c);
 	}
 	_putchar('\n');
 }
