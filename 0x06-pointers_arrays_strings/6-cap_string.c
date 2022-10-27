@@ -1,29 +1,33 @@
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
- * @s: input string.
+ * @n: input string.
  * Return: the pointer to dest.
  */
-char *cap_string(char *s)
+char *cap_string(char *n)
 {
-	int a = 0, i;
-	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i = 0;
 
-	if (*(s + a) >= 97 && *(s + a) <= 122)
-		*(s + a) = *(s + a) - 32;
-	a++;
-	while (*(s + a) != '\0')
+	while (n[i])
 	{
-		for (i = 0; i < 13; i++)
-		{
-			if (*(s + a) == sep_words[i])
-			{
-				if (((s + (a + 1)) >= 97) && ((s + (a + 1)) <= 122))
-					*(s + (a + 1)) = *(s + (a + 1)) - 32;
-				break;
-			}
-		}
-		a++;
+		while (!(n[i] >= 'a' && n[i] <= 'z'))
+			i++;
+		if (n[i - i] == ' ' ||
+		n[i - 1] == '\t' ||
+		n[i - 1] == '\n' ||
+		n[i - 1] == ',' ||
+		n[i - 1] == ';' ||
+		n[i - 1] == '.' ||
+		n[i - 1] == '!' ||
+		n[i - 1] == '?' ||
+		n[i - 1] == '"' ||
+		n[i - 1] == '(' ||
+		n[i - 1] == ')' ||
+		n[i - 1] == '{' ||
+		n[i - 1] == '}' ||
+		i == 0)
+			n[i] -= 32;
+		i++;
 	}
-	return (s);
+	return (n);
 }
