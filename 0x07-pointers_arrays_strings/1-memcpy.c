@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _memcpy - copy Memory
  * @dest: dest memory area
@@ -6,7 +7,8 @@
  * @n: bytes from memoryrea to copy
  * Return: memory area fill
  */
-char *_memcpy(char *dest, char *src, unsigned int n);
+
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int a;
 
