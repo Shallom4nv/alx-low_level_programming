@@ -1,13 +1,43 @@
-#include <unistd.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * malloc_checked - allocates memory.
+ * @b: amount of bytes.
+ * Return: pointer to the allocated memory.
+ * if malloc fails, status value is equal to 98.
  */
 
-int _putchar(char c)
+void *malloc_checked(unsigned int b)
 {
-return (write(1, &c, 1));
+	char *p;
+
+	p = malloc(b);
+	if (p == NULL)
+		exit(98);
+	return (p);
+}
+
+_____________________
+
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * malloc_checked - allocate a space
+ * @b: unsigned int
+ * Return: void
+ */
+
+void *malloc_checked(unsigned int b)
+{
+	void *x;
+
+	x = malloc(b);
+	if (x == NULL)
+{
+	exit(98);
+}
+	return (x);
 }
