@@ -18,7 +18,7 @@ void *malloc_checked(unsigned int b)
 	return (p);
 }
 
-_____________________
+
 
 #include "main.h"
 #include <stdio.h>
