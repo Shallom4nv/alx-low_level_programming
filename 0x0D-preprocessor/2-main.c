@@ -6,8 +6,8 @@
  */
 
 int main(void)
-{
-printf("%s\n", FILE);
-return (0);
-}
 
+{
+	printf("%s\n", --FILE_);
+	return (0);
+}
